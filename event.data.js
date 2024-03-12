@@ -14,7 +14,6 @@ const EVENT_DATA = [
         "description": "Rawane's Gig at Twenty-Two Gemmeyze",
         "src": "images/Event1.jpg"
     },
-
     {
         "name": "Event 2",
         "dateString": "7th of July 2023",
@@ -57,3 +56,21 @@ const EVENT_DATA = [
         "src": "images/ptw-logo-1.jpeg"
     }
 ];
+
+// Function to generate HTML for events
+function generateEventHTML(event) {
+    return `
+    <div class="event">
+        <h3>${event.name}</h3>
+        <p>${event.dateString}</p>
+        <img src="${event.src}" alt="${event.name}">
+        <p>${event.description}</p>
+    </div>`;
+}
+
+// Generate HTML for events
+const eventsHTML = EVENT_DATA.map(event => generateEventHTML(event)).join('');
+
+// Display events on the page
+document.getElementById('events-container').innerHTML = eventsHTML;
+
