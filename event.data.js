@@ -55,5 +55,5 @@ const EVENT_DATA = [
         "dateString": "",
         "description": "Stay Tuned for our Up Coming Events",
         "src": "images/ptw-logo-1.jpeg"
-    },
+    }
 ];
